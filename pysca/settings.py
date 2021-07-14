@@ -30,7 +30,7 @@ path2output = "output/"
 
 # Used for pulling species, taxonomy annotations from ncbi database. PLEASE
 # change to your own your email!!!
-entrezemail = "your.email@youruniversity.edu"
+entrezemail = "michaelschamber2021@u.northwestern.edu"
 
 # If you are using a version of PyMOL not intalled in your system PATH, you can
 # add the path here. Use an absolute path to the PyMOL executable, or leave

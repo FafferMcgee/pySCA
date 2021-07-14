@@ -18,6 +18,7 @@ scaProcessMSA \
   -d ${outputdir} \
   -f 'Homo sapiens' \
   -p 0.5 0.5 0.5 0.8 \
+  -q 8 \
   -t -n 2>&1 | tee -a ${outputdir}/CaSR_orthologs.log
  echo "Begin scaCore:"
 scaCore -i ${outputdir}/CaSR_orthologs.db 2>&1 | \
