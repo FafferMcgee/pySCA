@@ -14,15 +14,15 @@ echo "Begin scaProcessMSA:"
 scaProcessMSA \
   -a ${datadir}/CaSR_orthologs.an \
   -b ${datadir} \
-  -i 0 \
-  -d ${outputdir} \
+  -s 7DTV \
+  -c A \
   -f 'Homo sapiens' \
-  -p 0.5 0.5 0.5 0.8 \
-  -q 8 \
+  -d ${outputdir} \
+  -p 0.8 0.5 0.2 0.99 \
   -t -n 2>&1 | tee -a ${outputdir}/CaSR_orthologs.log
  echo "Begin scaCore:"
 scaCore -i ${outputdir}/CaSR_orthologs.db 2>&1 | \
   tee -a ${outputdir}/CaSR_orthologs.log
-#scaSectorID -i ${outputdir}/CaSR_orthologs.db 2>&1 | \
-#  tee -a ${outputdir}/CaSR_orthologs.log
-#echo
+scaSectorID -i ${outputdir}/CaSR_orthologs.db 2>&1 | \
+  tee -a ${outputdir}/CaSR_orthologs.log
+echo
